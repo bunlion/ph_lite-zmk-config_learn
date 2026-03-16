@@ -13,6 +13,10 @@ manifest:
       remote: phdesign
       revision: v0.3-lts
       import: app/west.yml
+    - name: ph_lite-zmk-config_learn
+      url: https://github.com/bunlion/ph_lite-zmk-config_learn
+      revision: master
+      path: modules/ph_lite-zmk-config_learn
   self:
     path: config
 
