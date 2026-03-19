@@ -94,11 +94,11 @@
         default_rgb {
             layer-id = <LAYER_Base>;
             bindings = <
-&ug ___       &ug ___ &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___       &ug ___
-&ug ___       &ug ___ &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___       &ug ___
-&ug_cl ___ GREEN      &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___                  &ug ___
-&ug ___                &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___               &ug ___
-&ug ___       &ug ___ &ug ___                          &ug ___                          &ug ___    &ug ___    &ug ___               &ug ___
+&ug BLACK       &ug BLACK &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK       &ug BLACK
+&ug BLACK       &ug BLACK &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK       &ug BLACK
+&ug_cl ___ GREEN      &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK                  &ug BLACK
+&ug BLACK                &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK               &ug BLACK
+&ug BLACK       &ug BLACK &ug BLACK                          &ug BLACK                          &ug BLACK    &ug BLACK    &ug BLACK               &ug BLACK
             >;
         };
 
@@ -125,7 +125,7 @@
         };
 
         rgb_rgb {
-            layer-id = <LAYER_RGB>;
+            layer-id = <LAYER_lightk>;
             bindings = <
 &ug BLACK     &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK  &ug BLACK  &ug BLACK  &ug BLACK  &ug BLACK  &ug BLACK  &ug BLACK     &ug BLACK
 &ug BLACK     &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK  &ug PURPLE &ug ORANGE &ug PURPLE &ug ORANGE &ug GREEN  &ug GREEN     &ug BLACK
