@@ -1,0 +1,197 @@
+/*
+ * Copyright (c) 2025 Team PHDesign
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <dt-bindings/zmk/hid_indicators.h>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
+
+#define LAYER_Base 0
+#define LAYER_Function 1
+#define LAYER_Bluetooth 2
+#define LAYER_RGB 3
+#define LAYER_Function2 4
+
+#include "PH60-SC_V2-rgb.dtsi"
+
+/ {
+    behaviors {
+        // Macro to clear current BT profile (tap)
+
+        bt_clear_current_macro: bt_clear_current_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_CLR>;
+        };
+
+        // Macro to clear all BT profiles (hold)
+
+        bt_clear_all_macro: bt_clear_all_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_CLR_ALL>;
+        };
+
+        ug__ORANGE: ug__ORANGE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "UG_ORANGE";
+        };
+
+        ug: ug {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "UG";
+        };
+
+        ug__RED: ug__RED {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "UG_RED";
+        };
+
+        ug__BLUE: ug__BLUE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "UG_BLUE";
+        };
+
+        ug__GOLD: ug__GOLD {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "UG_GOLD";
+        };
+
+        ug__GREEN: ug__GREEN {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "UG_GREEN";
+        };
+
+        ug__PURPLE: ug__PURPLE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "UG_PURPLE";
+        };
+
+        ug_____: ug_____ {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "UG_____";
+        };
+
+        // Hold to clear all BT profiles, Tap to clear current
+
+        bt_clear_holdtap: bt_clear_holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <3000>;
+            bindings = <&bt_clear_all_macro>, <&bt_clear_current_macro>;
+        };
+
+        mt: mod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+
+            display-name = "Mod-Tap";
+        };
+
+        lt: layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            bindings = <&mo>, <&kp>;
+
+            display-name = "Layer-Tap";
+        };
+
+        td_caps: td_caps {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_CAPS";
+            #binding-cells = <0>;
+            tapping-term-ms = <100>;
+            bindings = <&lt 1 CAPS>, <&mo 4>;
+        };
+    };
+
+    macros {
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            display-name = "Base";
+            bindings = <
+&ug_____  &ug_____  &ug_____  &ug_____  &ug_____  &ug_____  &ug_____  &ug_____  &ug_____  &ug_____  &ug_____  &ug_____  &ug_____  &ug_____
+&ug_____     &ug_____     &ug_____   &ug_____     &ug_____     &ug_____     &ug_____     &ug_____     &ug__BLUE   &ug_____     &ug_____     &ug_____    &ug_____    &ug_____
+&ug_____     &ug_____   &ug_____   &ug_____   &ug_____     &ug_____     &ug_____     &ug__BLUE   &ug__BLUE   &ug__BLUE   &ug_____    &ug_____    &ug_____
+&ug_____     &ug_____  &ug_____    &ug_____     &ug_____     &ug_____    &ug_____     &ug_____     &ug_____     &ug_____     &ug_____     &ug_____
+&ug_____     &ug_____     &ug_____     &ug_____     &ug_____     &ug_____    &ug_____    &ug_____
+            >;
+        };
+
+        function_layer {
+            display-name = "Function";
+            bindings = <
+&kp GRAVE  &kp F1    &kp F2        &kp F3     &kp F4      &kp F5  &kp F6  &kp F7    &kp F8    &kp F9     &kp F10    &kp F11    &kp F12  &studio_unlock
+&trans     &trans    &kp UP        &trans     &sys_reset  &trans  &trans  &trans    &kp UP    &trans     &kp PSCRN  &kp HOME   &kp END  &kp BSLH
+&trans     &kp LEFT  &kp DOWN      &kp RIGHT  &trans      &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_UP  &kp PG_DN  &trans
+&trans     &rgb      &ug__RGB_TOG  &mo 3      &trans      &trans  &mo 2   &trans    &trans    &trans     &trans     &trans
+&trans     &trans    &trans        &trans     &trans      &trans  &trans  &trans
+            >;
+        };
+
+        bluetooth_layer {
+            display-name = "Bluetooth";
+            bindings = <
+&trans        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &bt_clear_holdtap 0 0
+&out OUT_TOG  &trans        &trans        &trans        &bootloader   &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &soft_off
+&trans        &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans  &trans
+            >;
+        };
+
+        rgb_layer {
+            display-name = "RGB";
+            bindings = <
+&trans        &trans        &trans        &trans        &trans        &trans        &trans  &trans        &trans        &trans  &trans        &trans  &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans  &rgb          &ug__RGB_HUD  &rgb    &ug__RGB_HUI  &rgb    &ug__RGB_SAD  &rgb
+&ug__RGB_SAI  &rgb          &ug__RGB_EFR  &rgb          &ug__RGB_EFF  &trans        &trans  &trans        &trans        &trans  &trans        &trans  &trans
+&rgb          &ug__RGB_BRD  &rgb          &ug__RGB_BRI  &rgb          &ug__RGB_SPD  &rgb    &ug__RGB_SPI  &trans        &trans  &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans  &trans
+            >;
+        };
+
+        function2_layer {
+            display-name = "Function2";
+            bindings = <
+&kp GRAVE  &kp F1    &kp F2        &kp F3     &kp F4      &kp F5  &kp F6  &kp F7    &kp F8     &kp F9   &kp F10    &kp F11  &kp F12  &studio_unlock
+&trans     &trans    &kp UP        &trans     &sys_reset  &trans  &trans  &trans    &kp PG_UP  &trans   &kp PSCRN  &trans   &trans   &kp BSLH
+&trans     &kp LEFT  &kp DOWN      &kp RIGHT  &trans      &trans  &trans  &kp HOME  &kp PG_DN  &kp END  &trans     &trans   &trans
+&trans     &rgb      &ug__RGB_TOG  &trans     &trans      &trans  &trans  &trans    &trans     &trans   &trans     &trans
+&trans     &trans    &trans        &trans     &trans      &trans  &trans  &trans
+            >;
+        };
+    };
+};

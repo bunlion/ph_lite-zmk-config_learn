@@ -94,44 +94,55 @@
         default_rgb {
             layer-id = <LAYER_Base>;
             bindings = <
-&ug BLACK       &ug BLACK &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK       &ug BLACK
-&ug BLACK       &ug BLACK &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK       &ug BLACK
-&ug_cl ___ GREEN      &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK                  &ug BLACK
-&ug BLACK                &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK    &ug BLACK               &ug BLACK
-&ug BLACK       &ug BLACK &ug BLACK                          &ug BLACK                          &ug BLACK    &ug BLACK    &ug BLACK               &ug BLACK
+&ug ___       &ug ___ &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___       &ug ___
+&ug ___       &ug ___ &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___       &ug ___
+&ug_cl ___ GREEN      &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___                  &ug ___
+&ug ___                &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___    &ug ___               &ug ___
+&ug ___       &ug ___ &ug ___                          &ug ___                          &ug ___    &ug ___    &ug_nl ___ GREEN              &ug ___
             >;
         };
 
         function_rgb {
             layer-id = <LAYER_Function>;
             bindings = <
-&ug ORANGE    &ug ORANGE &ug ORANGE &ug ORANGE &ug ORANGE &ug ORANGE &ug ORANGE &ug ORANGE &ug ORANGE &ug ORANGE &ug ORANGE &ug ORANGE &ug ORANGE &ug RED
-&ug BLACK     &ug BLACK  &ug GREEN  &ug BLACK  &ug RED    &ug BLACK  &ug BLACK  &ug BLACK  &ug BLACK  &ug BLACK  &ug BLUE   &ug BLUE   &ug BLUE   &ug GOLD
-&ug BLACK     &ug GREEN  &ug GREEN  &ug GREEN  &ug BLACK  &ug BLACK  &ug BLACK  &ug BLACK  &ug BLACK  &ug BLACK  &ug BLUE   &ug BLUE              &ug BLACK
-&ug BLACK                 &ug PURPLE &ug GOLD   &ug BLACK  &ug BLACK  &ug BLUE   &ug BLACK  &ug BLACK  &ug BLACK  &ug BLACK  &ug BLACK               &ug BLACK
-&ug BLACK     &ug BLACK  &ug BLACK                         &ug BLACK                         &ug BLACK  &ug BLACK  &ug BLACK               &ug BLACK
+&ug ORANGE  &ug ORANGE  &ug ORANGE  &ug ORANGE  &ug ORANGE  &ug ORANGE  &ug ORANGE  &ug ORANGE  &ug ORANGE  &ug ORANGE  &ug ORANGE  &ug ORANGE  &ug ORANGE  &ug RED
+&ug ___     &ug ___     &ug GREEN   &ug ___     &ug RED     &ug ___     &ug ___     &ug ___     &ug GREEN   &ug ___     &ug BLUE    &ug BLUE    &ug BLUE    &ug GOLD
+&ug ___     &ug GREEN   &ug GREEN   &ug GREEN   &ug ___     &ug ___     &ug ___     &ug GREEN   &ug GREEN   &ug GREEN   &ug BLUE    &ug BLUE    &ug ___
+&ug ___     &ug PURPLE  &ug GOLD    &ug ___     &ug ___     &ug BLUE    &ug RED     &ug RED     &ug RED     &ug ___     &ug ___     &ug ORANGE
+&ug ___     &ug ___     &ug ___     &ug GOLD     &ug ___     &ug ___    &ug ___    &ug ___
             >;
         };
 
         bluetooth_rgb {
             layer-id = <LAYER_Bluetooth>;
             bindings = <
-&ug BLACK     &ug BLUE  &ug BLUE  &ug BLUE  &ug BLUE  &ug BLUE  &ug BLACK  &ug BLACK  &ug BLACK  &ug BLACK  &ug BLACK  &ug BLACK  &ug BLACK     &ug RED
-&ug GREEN     &ug BLACK &ug BLACK &ug BLACK &ug RED   &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK     &ug BLACK
-&ug BLACK     &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK               &ug ORANGE
-&ug BLACK                 &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK               &ug BLACK
-&ug BLACK     &ug BLACK &ug BLACK                      &ug BLACK                      &ug BLACK &ug BLACK &ug BLACK               &ug BLACK
+&ug ___     &ug BLUE  &ug BLUE  &ug BLUE  &ug BLUE  &ug BLUE  &ug ___  &ug ___  &ug ___  &ug ___  &ug ___  &ug ___  &ug ___     &ug RED
+&ug GREEN     &ug ___ &ug ___ &ug ___ &ug RED   &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___     &ug ___
+&ug ___     &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___               &ug ORANGE
+&ug ___                 &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___               &ug ___
+&ug ___     &ug ___ &ug ___                      &ug ___                      &ug ___ &ug ___ &ug ___               &ug ___
             >;
         };
 
         rgb_rgb {
-            layer-id = <LAYER_lightk>;
+            layer-id = <LAYER_RGB>;
             bindings = <
-&ug BLACK     &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK  &ug BLACK  &ug BLACK  &ug BLACK  &ug BLACK  &ug BLACK  &ug BLACK     &ug BLACK
-&ug BLACK     &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK  &ug PURPLE &ug ORANGE &ug PURPLE &ug ORANGE &ug GREEN  &ug GREEN     &ug BLACK
-&ug BLACK     &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK  &ug PURPLE &ug ORANGE &ug PURPLE &ug ORANGE &ug BLACK               &ug BLACK
-&ug BLACK                 &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK &ug BLACK               &ug BLACK
-&ug BLACK     &ug BLACK &ug BLACK                      &ug BLACK                       &ug BLACK &ug BLACK &ug BLACK               &ug BLACK
+&ug ___     &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___  &ug ___  &ug ___  &ug ___  &ug ___  &ug ___  &ug ___     &ug ___
+&ug ___     &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___  &ug PURPLE &ug ORANGE &ug PURPLE &ug ORANGE &ug GREEN  &ug GREEN     &ug ___
+&ug ___     &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___  &ug PURPLE &ug ORANGE &ug PURPLE &ug ORANGE &ug ___               &ug ___
+&ug ___                 &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___               &ug ___
+&ug ___     &ug ___ &ug ___                      &ug ___                       &ug ___ &ug ___ &ug ___               &ug ___
+            >;
+        };
+
+        function2_rgb {
+            layer-id = <LAYER_Function2>;
+            bindings = <
+&ug ___  &ug ___  &ug ___  &ug ___  &ug ___  &ug ___  &ug ___  &ug ___  &ug ___  &ug ___  &ug ___  &ug ___  &ug ___  &ug ___
+&ug ___     &ug ___     &ug ___   &ug ___     &ug ___     &ug ___     &ug ___     &ug ___     &ug BLUE   &ug ___     &ug ___     &ug ___    &ug ___    &ug ___
+&ug ___     &ug ___   &ug ___   &ug ___   &ug ___     &ug ___     &ug ___     &ug BLUE   &ug BLUE   &ug BLUE   &ug ___    &ug ___    &ug ___
+&ug ___     &ug ___  &ug ___    &ug ___     &ug ___     &ug ___    &ug ___     &ug ___     &ug ___     &ug ___     &ug ___     &ug ___
+&ug ___     &ug ___     &ug ___     &ug ___     &ug ___     &ug ___    &ug ___    &ug ___
             >;
         };
     };
